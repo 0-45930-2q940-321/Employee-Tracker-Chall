@@ -6,7 +6,11 @@ const db = mysql.createConnection({
     user: 'root',
     
     password: '',
-    database: ''
-});
+    database: 'business_management'
+},
+
+    console.log('Test')
+
+);
 
 module.exports = db;

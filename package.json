@@ -4,5 +4,22 @@
     "express": "^4.17.2",
     "inquirer": "^8.2.0",
     "mysql2": "^2.3.3"
-  }
+  },
+  "name": "develop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/94r0372189547389/Employee-Tracker-Chall.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/94r0372189547389/Employee-Tracker-Chall/issues"
+  },
+  "homepage": "https://github.com/94r0372189547389/Employee-Tracker-Chall#readme",
+  "description": ""
 }
