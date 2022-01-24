@@ -2,9 +2,10 @@ const inquirer = require('inquirer');
 const db = require('./db/connect');
 const addDepartment = require('./cases/add-department.js');
 const addRole = require('./cases/add-role');
-const addEmployee = require('./cases/add-employee')
-const updateEmployee = require('./cases/update-employee')
-const showDepartments = require('./cases/show-departments')
+const addEmployee = require('./cases/add-employee');
+const updateEmployee = require('./cases/update-employee');
+const showDepartments = require('./cases/show-departments');
+const showRoles = require('./cases/show-roles');
 
 let sql;
 
@@ -15,7 +16,7 @@ start = () => {
                 type: 'list',
                 name: 'options',
                 message: 'What would you like to do?',
-                choices: ["Add Department", "Add Role", "Add Employee", "Update Employee Role", "View All Departments", "View all roles", "View all employees"]
+                choices: ["Add Department", "Add Role", "Add Employee", "Update Employee Role", "View All Departments", "View All Roles", "View All Employees"]
             }
         ]).then(data => {
             switch (data.options) {
@@ -33,6 +34,12 @@ start = () => {
                     break;
                 case 'View All Departments':
                     showDepartments(sql);
+                    break;
+                case 'View All Roles':
+                    showRoles(sql);
+                    break;
+                case 'View All Employees':
+                    showEmployees(sql);
                     break;
             }
         });
