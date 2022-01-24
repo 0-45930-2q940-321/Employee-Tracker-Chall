@@ -30,7 +30,7 @@ start = () => {
                 case 'Add Employee':
                     addEmployee(sql);
                     break;
-                case 'Update Employee':
+                case 'Update Employee Role':
                     updateEmployee(sql);
                     break;
                 case 'View All Departments':
