@@ -42,7 +42,7 @@ addRole = (sql, params) => {
             
             db.query(sql, params, (err) => {
                 if(err) {
-                    return err;
+                    console.log(err);
 
                 } else {
                     console.log(`The ROLE ${data.title} TITLE with a SALARY OF ${data.salary} and the DEPARTMENT ID: ${data.departmentId} will be added to the ROLE TABLE.`)
