@@ -4,6 +4,7 @@ const addDepartment = require('./cases/add-department.js');
 const addRole = require('./cases/add-role');
 const addEmployee = require('./cases/add-employee')
 const updateEmployee = require('./cases/update-employee')
+const showDepartments = require('./cases/show-departments')
 
 let sql;
 
@@ -14,7 +15,7 @@ start = () => {
                 type: 'list',
                 name: 'options',
                 message: 'What would you like to do?',
-                choices: ["Add Department", "Add Role", "Add Employee", "Update Employee role", "View all departments", "View all roles", "View all employees"]
+                choices: ["Add Department", "Add Role", "Add Employee", "Update Employee Role", "View All Departments", "View all roles", "View all employees"]
             }
         ]).then(data => {
             switch (data.options) {
@@ -29,6 +30,9 @@ start = () => {
                     break;
                 case 'Update Employee':
                     updateEmployee(sql);
+                    break;
+                case 'View All Departments':
+                    showDepartments(sql);
                     break;
             }
         });
