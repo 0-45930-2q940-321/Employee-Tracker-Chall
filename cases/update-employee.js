@@ -32,7 +32,7 @@ updateEmployee = (sql, params) => {
             }
         ])
         .then(data => {
-            sql = `UPDATE employees SET role_id = ? WHERE id =?`;
+            sql = `UPDATE employee SET role_id = ? WHERE id =?`;
             params = [data.newEmployeeRole, data.employeeId];
 
             db.query(sql, params, (err, rows) => {
