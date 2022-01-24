@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const db = require('./db/connect');
-const addDepartment = require('./cases/add-department.js')
+const addDepartment = require('./cases/add-department.js');
+const addRole = require('./cases/add-role');
 
 let sql;
 
@@ -11,11 +12,16 @@ start = () => {
                 type: 'list',
                 name: 'options',
                 message: 'What would you like to do?',
-                choices: ["Add department", "Add role", "Add employee", "Update employee role", "View all departments", "View all roles", "View all employees"]
+                choices: ["Add Department", "Add Role", "Add employee", "Update employee role", "View all departments", "View all roles", "View all employees"]
             }
         ]).then(data => {
-            if(data.options === 'Add department') {
-                addDepartment(sql);
+            switch (data.options) {
+                case 'Add Department':
+                    addDepartment(sql);
+                    break;
+                case 'Add Role':
+                    addRole(sql);
+                    break;
             }
         });
 };
@@ -30,7 +36,7 @@ continueCheck = () => {
                 default: false
             }
         ]).then(data => {
-            if(data.back) {
+            if (data.back) {
                 start();
 
             } else {

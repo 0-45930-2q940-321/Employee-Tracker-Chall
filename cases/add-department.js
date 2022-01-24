@@ -20,12 +20,12 @@ addDepartment = (sql, params) => {
                     return err;
 
                 } else {
-                    console.log(`${params} department was added.`);
+                    console.log(`${params} department added to the DEPARTMENT TABLE.`);
                     
+                    continueCheck();
                 }
-                continueCheck();
             });
         });
-}
+};
 
 module.exports = addDepartment;
