@@ -31,7 +31,7 @@ addRole = (sql, params) => {
                         return true
 
                     } else {
-                        console.log('THE ID MUST BE A NUMBER AND LOWER THAN OR EQUAL TO 6')
+                        console.log('THE ID MUST BE A NUMBER AND CHARACTER AMOUNT LOWER THAN OR EQUAL TO 6')
                     };
                 }
             }
