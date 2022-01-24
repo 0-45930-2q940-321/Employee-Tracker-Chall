@@ -24,7 +24,7 @@ addEmployee = (sql, params) => {
 
                     } else {
                         console.log('EMPLOYEE ID NEEDS TO BE A NUMBER AND CHARACTER AMOUNT LESS THAN OR EQUAL TO 4')
-                    }
+                    };
                 }
             },
             {
@@ -37,7 +37,7 @@ addEmployee = (sql, params) => {
             if (!data.managerId) {
                 data.managerId = null;
             };
-            
+
             sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)`;
             params = [data.first_name, data.last_name, data.employeeId, data.managerId];
 

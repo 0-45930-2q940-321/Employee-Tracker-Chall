@@ -14,7 +14,7 @@ updateEmployee = (sql, params) => {
                     } else {
                         console.log('The ID you entered does NOT EXIST!');
                         return false;
-                    }
+                    };
                 }
             },
             {
@@ -27,7 +27,7 @@ updateEmployee = (sql, params) => {
 
                     } else {
                         console.log('EMPLOYEE ID NEEDS TO BE A NUMBER AND CHARACTER AMOUNT LESS THAN OR EQUAL TO 4')
-                    }
+                    };
                 }
             }
         ])

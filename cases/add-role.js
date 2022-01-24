@@ -48,9 +48,9 @@ addRole = (sql, params) => {
                     console.log(`The ROLE ${data.title} TITLE with a SALARY OF ${data.salary} and the DEPARTMENT ID: ${data.departmentId} will be added to the ROLE TABLE.`)
 
                     continueCheck();
-                }
-            })
-        })
+                };
+            });
+        });
 };
 
 module.exports = addRole;

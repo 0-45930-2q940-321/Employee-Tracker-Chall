@@ -9,6 +9,7 @@ addDepartment = (sql, params) => {
                 name: 'department',
                 message: 'What is the name of your department?',
             }
+            
         ]).then(data => {
 
             sql = `INSERT INTO department (name) VALUES (?)`;
@@ -23,7 +24,7 @@ addDepartment = (sql, params) => {
                     console.log(`${params} department added to the DEPARTMENT TABLE.`);
                     
                     continueCheck();
-                }
+                };
             });
         });
 };
