@@ -1,7 +1,7 @@
 const db = require('../db/connect');
 const cTable = require('console.table');
 
-showDepartments = (sql, params) => {
+showDepartments = (sql) => {
 
     sql = `SELECT * FROM department`;
 

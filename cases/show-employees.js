@@ -1,16 +1,16 @@
 const db = require('../db/connect');
 const cTable = require('console.table');
 
-showRoles = (sql) => {
+showEmployees = (sql) => {
 
-    sql = `SELECT * FROM role`;
+    sql = `SELECT * FROM employee`;
 
     db.query(sql, (err, rows) => {
         if (err) {
             console.log(err)
 
         } else {
-            console.log("Here are ALL ROLES: ");
+            console.log("Here are ALL EMPLOYEES: ");
             console.table(rows);
 
             continueCheck();
@@ -18,4 +18,4 @@ showRoles = (sql) => {
     });
 };
 
-module.exports = showRoles;
+module.exports = showEmployees;

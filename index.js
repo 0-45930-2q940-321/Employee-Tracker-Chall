@@ -6,6 +6,7 @@ const addEmployee = require('./cases/add-employee');
 const updateEmployee = require('./cases/update-employee');
 const showDepartments = require('./cases/show-departments');
 const showRoles = require('./cases/show-roles');
+const showEmployees = require('./cases/show-employees');
 
 let sql;
 
