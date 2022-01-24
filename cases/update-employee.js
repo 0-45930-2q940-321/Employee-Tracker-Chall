@@ -20,7 +20,15 @@ updateEmployee = (sql, params) => {
             {
                 type: "number",
                 name: "newEmployeeRole",
-                message: "Please enter the name of the new role for the employee: ",
+                message: "Please enter the ID of the new role for the employee: ",
+                validate: newEmployeeRoleInput => {
+                    if (!isNaN(newEmployeeRoleInput) && newEmployeeRoleInput.length <= 4) {
+                        return true
+
+                    } else {
+                        console.log('EMPLOYEE ID NEEDS TO BE A NUMBER AND CHARACTER AMOUNT LESS THAN OR EQUAL TO 4')
+                    };
+                }
             }
         ])
         .then(data => {
@@ -33,7 +41,7 @@ updateEmployee = (sql, params) => {
                     console.log(err);
 
                 } else {
-                    console.log(`EMPLOYEE: ${employeeId} , ROLE has been CHANGED TO ${newEmployeeRole}`);
+                    console.log(`EMPLOYEE: ${employeeId} , ROLE ID has been CHANGED TO ${newEmployeeRole}`);
 
                     continueCheck();
                 }
