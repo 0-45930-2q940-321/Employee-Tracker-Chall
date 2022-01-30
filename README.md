@@ -38,3 +38,5 @@ Please contact me if you have any questions.
 
 Email: michaelcounseller@gmail.com
 
+## Walkthrough
+[Walkthrough Video](https://watch.screencastify.com/v/ZEyWmXAM6i7rHSAlpJYl)
